@@ -1,22 +1,29 @@
-body{
+:root{
+    font-family: 'Outfit', sans-serif;
+    font-size: 15px;
+}
+
+body {
     background-color: hsl(212, 45%, 89%);
     min-height: 100vh;
     margin: 0;
-    padding: 0;
+    padding: 18px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    --radius-primary: 5%;
 }
 
 .card{
     background-color: hsl(0, 0%, 100%);
-    border-radius: 5%;
+    border-radius: var(--radius-primary);
     box-shadow: 0 0 30px -15px  hsl(220, 15%, 55%);
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 10px;
+    padding: 12px;
 }
 
 .attribution{
@@ -24,29 +31,31 @@ body{
 }
 
 .qr{
-    width: 230px;
-    height: 235px;
-    border-radius: 5%;
+    width: 100%;
+    border-radius: var(--radius-primary);
 }
 
-.parrafo1{
-    font-family: 'Outfit', sans-serif;
+.title{
     font-weight: 700;
-    width: 230px;
-    text-align: center;
-    margin: 0;
     padding: 15px 0px;
     padding-bottom: 10px;
+    font-size: 1.4rem;
 }
 
-.parrafo2{
-    font-family: 'Outfit', sans-serif;
+.description{
     font-weight: 400;
-    font-size: 13px;
     color: hsl(220, 15%, 55%);
-    width: 230px;
-    text-align: center;
     padding: 2px; 
     padding-bottom: 20px;
+}
+
+.title, .description{
+    text-align: center;
     margin: 0;
+}
+
+@media (min-width: 440px) {
+    .card {
+        width: 350px;
+    }
 }
